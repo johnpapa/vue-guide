@@ -1,0 +1,35 @@
+<html>
+
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<body>
+  <div id="app">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage()">Reverse Message</button>
+
+    <p>{{ message2 }}</p>
+    <button @click="reverseMessage2()">Another Reverse Message</button>
+  </div>
+</body>
+
+<script>
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue.js!',
+      message2: 'Easy, huh?'
+    },
+    methods: {
+      reverseMessage: function () {
+        this.message = this.message.split('').reverse().join('')
+      },
+      reverseMessage2: function () {
+        this.message2 = this.message2.split('').reverse().join('')
+      }
+    }
+  })
+</script>
+
+
+</html>

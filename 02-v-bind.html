@@ -1,0 +1,25 @@
+<html>
+
+<head>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <a v-bind:href="url" target="_blank">Go to JohnPapa.net</a>
+    <br>
+    <a :href="vueUrl" target="_blank">Go to Vue.js</a>
+  </div>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        url: 'http://johnpapa.net',
+        vueUrl: 'https://vuejs.org'
+      }
+    })
+  </script>
+</body>
+
+</html>

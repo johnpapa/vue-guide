@@ -1,0 +1,24 @@
+<html>
+
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<body>
+  <div id="app">
+    <span v-if="seen">Now you see me</span>
+  </div>
+</body>
+
+<script>
+
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      seen: true
+    }
+  })
+
+</script>
+
+
+</html>
