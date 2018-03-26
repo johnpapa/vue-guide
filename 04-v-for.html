@@ -1,15 +1,17 @@
 <html>
 
-<!-- development version, includes helpful console warnings -->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<head>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
 
 <body>
   <div id="app">
-    <ol>
-      <li v-for="todo in todos">
-        {{ todo.text }}
+    <ul>
+      <li v-for="(person, index) in people" :key="id">
+        {{person.id}} - {{ person.name }}
       </li>
-    </ol>
+    </ul>
   </div>
 </body>
 
@@ -17,10 +19,11 @@
   var vm = new Vue({
     el: '#app',
     data: {
-      todos: [
-        { text: 'Learn JavaScript' },
-        { text: 'Learn Vue' },
-        { text: 'Build something awesome' }
+      people: [
+        { id: 10, name: 'Colleen' },
+        { id: 11, name: 'Ella' },
+        { id: 12, name: 'Madelyn' },
+        { id: 13, name: 'Haley' }
       ]
     }
   })
