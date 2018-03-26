@@ -9,7 +9,7 @@
   <div id="app">
     <ul>
       <li v-for="(person, index) in people" :key="id">
-        {{person.id}} - {{ person.name }}
+        {{ index }} - {{ person.name }}
       </li>
     </ul>
   </div>
